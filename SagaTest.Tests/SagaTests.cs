@@ -45,7 +45,7 @@ public class SagaTests : IAsyncLifetime
                     .MartenRepository(r =>
                     {
                         r.Index(x => x.CorrelationId);
-                        r.UseOptimisticConcurrency(false);
+                        r.UseOptimisticConcurrency(true);
                     });
                 
                 cfg.AddConfigureEndpointsCallback((context,name,cfg) =>
